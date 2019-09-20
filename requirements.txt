@@ -1,0 +1,6 @@
+Flask
+gunicorn
+werkzeug
+pathlib
+fastai
+opencv-contrib-python
