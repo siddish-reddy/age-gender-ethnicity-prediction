@@ -2,5 +2,6 @@ Flask
 gunicorn
 werkzeug
 pathlib
-fastai
-opencv-contrib-python
+# https://download.pytorch.org/whl/cpu/torch-1.0.1-cp36-cp36m-win_amd64.whl
+# fastai
+# opencv-contrib-python
