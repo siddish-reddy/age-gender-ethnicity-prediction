@@ -4,10 +4,10 @@ from io import BytesIO
 
 from flask import Flask, make_response, request, render_template
 from werkzeug.exceptions import BadRequest
-# from serving import (
-#     load_model,
-#     evaluate_input,
-# )
+from serving import (
+    load_model,
+    evaluate_input,
+)
 
 app = Flask(__name__)
 app.config['DEBUG'] = False
