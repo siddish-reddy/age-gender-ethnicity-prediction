@@ -11,8 +11,7 @@ from serving import (
 
 app = Flask(__name__)
 app.config['DEBUG'] = False
-# load_model()
-
+load_model()
 
 @app.route('/', methods=['GET'])
 def index():
