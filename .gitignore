@@ -1,3 +1,4 @@
 fastaienv
 .vscode
 __pycache__
+models/
