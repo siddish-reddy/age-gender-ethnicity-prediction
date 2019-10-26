@@ -46,12 +46,13 @@
 
       var form = $('#imgForm');
       $.ajax({
-        url: window.location.href+'/image',
-        type: form.attr('method'),
+        url: 'image',
+        type: 'post',
         data: formData,
         processData: false,
         contentType: false,
         success: function(data) {
+          console.log(data);
           showOutput(data);
           $('.loading').toggleClass('d-none');
           $('#imgOutput').toggleClass('d-none');
@@ -66,7 +67,7 @@
     }
 
     function showOutput(data) {
-      $('#imgOutput').attr('src', 'data:image/jpeg;base64,' + data);
+      $('#imgOutput').attr('src', 'data:image/jpg;base64,' + data);
     }
 
     $("#file").change(function() {
@@ -85,7 +86,7 @@
   </div>
   <div class='row'>
     <div class='col-sm-12'>
-      <form id='imgForm' method='POST' enctype="multipart/form-data">
+      <form id='imgForm' enctype="multipart/form-data">
           <div class='form-group'>
             <label class='btn-file btn btn-outline-primary btn-lg'>
               Select image file
@@ -94,7 +95,7 @@
                      id="file" name="file"></input>
             </label>
           </div>
-      </form>
+      </form>  
     </div>
   </div>
 
