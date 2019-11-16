@@ -52,7 +52,6 @@
         processData: false,
         contentType: false,
         success: function(data) {
-          console.log(data);
           showOutput(data);
           $('.loading').toggleClass('d-none');
           $('#imgOutput').toggleClass('d-none');
@@ -67,7 +66,8 @@
     }
 
     function showOutput(data) {
-      $('#imgOutput').attr('src', 'data:image/jpg;base64,' + data);
+      $('#imgOutput').attr('src', 'data:image/jpeg;base64,' + data);
+      $('#img_input').remove();
     }
 
     $("#file").change(function() {
@@ -81,7 +81,7 @@
 <div class="container">
   <div class='row'>
     <div class='col-sm-12'>
-      <h1 class='display-4'>Recognising Age, Gender, Ethnicity from face images</h1>
+      <h1 class='display-4'>Recognising Age, Emotion, Ethnicity from face images</h1>
     </div>
   </div>
   <div class='row'>
@@ -101,7 +101,7 @@
 
 
   <div class='row'>
-    <div class='col-md-6 col-sm-12'>
+    <div class='col-md-6 col-sm-12' id='img_input'>
       <div>
         <img id='imgInput' class="img-fluid" src="{{input}}" />
       </div>
